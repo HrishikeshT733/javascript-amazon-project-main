@@ -1,5 +1,5 @@
 import { cart } from '../data/cart.js';
-
+import { products } from '../data/products.js';
 let productHTML='';
 //'products' array is defined in another products.js file which first loaded in amazon.html and then after this amazon.js gets loaded 
 products.forEach((product)=>{
