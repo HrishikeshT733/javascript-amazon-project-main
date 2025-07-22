@@ -1,3 +1,5 @@
+import { cart } from '../data/cart.js';
+
 let productHTML='';
 //'products' array is defined in another products.js file which first loaded in amazon.html and then after this amazon.js gets loaded 
 products.forEach((product)=>{
@@ -60,7 +62,7 @@ document.querySelector('.js-products-grid').innerHTML=productHTML;
 document.querySelectorAll('.js-add-to-cart')
 .forEach((button)=>{
 button.addEventListener('click', ()=>{
-    productId=button.dataset.productId;//here 'productName' has to follow the camel case otherwise the result will not generate
+   const productId=button.dataset.productId;//here 'productName' has to follow the camel case otherwise the result will not generate
 let matchingItem;
 
     cart.forEach((item)=>{
