@@ -1,39 +1,5 @@
-
-
-const products=[
-{
-    image: 'images/products/intermediate-composite-basketball.jpg',
-    name:'Intermediate Size Basketball',
-    rating: {
-        stars: 4,
-        count: 87
-    },
-    priceCents: 2095 //1 dollar=100 cents ,so 2095 is 20.95 dollar
-},
-{
-    image:'images/products/athletic-cotton-socks-6-pairs.jpg',
-    name:'Black and Gray Athletic Cotton Socks - 6 Pairs',
-    rating:{
-        stars:4.5,
-        count:65
-    },
-    priceCents: 1090
-},
-{
-image:'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
-name:' Adults Plain Cotton T-Shirt - 2 Pack',
-rating:{
-    stars: 4.5,
-    count:45
-},
-priceCents:67
-
-}
-
-];
-
 let productHTML='';
-
+//'products' array is defined in another products.js file which first loaded in amazon.html and then after this amazon.js gets loaded 
 products.forEach((product)=>{
 productHTML+=`
         <div class="product-container">
@@ -50,7 +16,7 @@ productHTML+=`
                     <img class="product-rating-stars"
                     src="images/ratings/rating-${product.rating.stars*10}.png">
                     <div class="product-rating-count link-primary">
-                  ${product.rating.count}"
+                  ${product.rating.count}
                     </div>
                 </div>
 
